@@ -83,7 +83,7 @@ var Edit = () => {
   };
 
   var deleteService = (id) => {
-    const copyServices = data.services;
+    var copyServices = data.services;
     copyServices = copyServices.filter((service) => service.id !== id);
     setData({ ...data, services: copyServices });
   };

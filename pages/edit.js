@@ -54,7 +54,7 @@ var Edit = () => {
   };
 
   var deleteProject = (id) => {
-    const copyProjects = data.projects;
+    var copyProjects = data.projects;
     copyProjects = copyProjects.filter((project) => project.id !== id);
     setData({ ...data, projects: copyProjects });
   };
@@ -111,7 +111,7 @@ var Edit = () => {
   };
 
   var deleteSocials = (id) => {
-    const copySocials = data.socials;
+    var copySocials = data.socials;
     copySocials = copySocials.filter((social) => social.id !== id);
     setData({ ...data, socials: copySocials });
   };

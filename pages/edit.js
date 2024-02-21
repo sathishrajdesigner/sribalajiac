@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import yourData from "../data/portfolio.json";
 import Cursor from "../components/Cursor";
 
-const Edit = () => {
+var Edit = () => {
   // states
   const [data, setData] = useState(yourData);
   const [currentTabs, setCurrentTabs] = useState("HEADER");
@@ -29,13 +29,13 @@ const Edit = () => {
   };
 
   // Project Handler
-  const editProjects = (projectIndex, editProject) => {
+  var editProjects = (projectIndex, editProject) => {
     let copyProjects = data.projects;
     copyProjects[projectIndex] = { ...editProject };
     setData({ ...data, projects: copyProjects });
   };
 
-  const addProject = () => {
+  var addProject = () => {
     setData({
       ...data,
       projects: [
@@ -53,7 +53,7 @@ const Edit = () => {
     });
   };
 
-  const deleteProject = (id) => {
+  var deleteProject = (id) => {
     const copyProjects = data.projects;
     copyProjects = copyProjects.filter((project) => project.id !== id);
     setData({ ...data, projects: copyProjects });
@@ -61,13 +61,13 @@ const Edit = () => {
 
   // Services Handler
 
-  const editServices = (serviceIndex, editService) => {
+  var editServices = (serviceIndex, editService) => {
     let copyServices = data.services;
     copyServices[serviceIndex] = { ...editService };
     setData({ ...data, services: copyServices });
   };
 
-  const addService = () => {
+  var addService = () => {
     setData({
       ...data,
       services: [
@@ -82,7 +82,7 @@ const Edit = () => {
     });
   };
 
-  const deleteService = (id) => {
+  var deleteService = (id) => {
     const copyServices = data.services;
     copyServices = copyServices.filter((service) => service.id !== id);
     setData({ ...data, services: copyServices });
@@ -90,13 +90,13 @@ const Edit = () => {
 
   // Socials Handler
 
-  const editSocials = (socialIndex, editSocial) => {
+  var editSocials = (socialIndex, editSocial) => {
     let copySocials = data.socials;
     copySocials[socialIndex] = { ...editSocial };
     setData({ ...data, socials: copySocials });
   };
 
-  const addSocials = () => {
+  var addSocials = () => {
     setData({
       ...data,
       socials: [
@@ -110,7 +110,7 @@ const Edit = () => {
     });
   };
 
-  const deleteSocials = (id) => {
+  var deleteSocials = (id) => {
     const copySocials = data.socials;
     copySocials = copySocials.filter((social) => social.id !== id);
     setData({ ...data, socials: copySocials });
@@ -118,7 +118,7 @@ const Edit = () => {
 
   // Resume
 
-  const handleAddExperiences = () => {
+  var handleAddExperiences = () => {
     setData({
       ...data,
       resume: {
@@ -137,7 +137,7 @@ const Edit = () => {
     });
   };
 
-  const handleEditExperiences = (index, editExperience) => {
+  var handleEditExperiences = (index, editExperience) => {
     let copyExperiences = data.resume.experiences;
     copyExperiences[index] = { ...editExperience };
     setData({
